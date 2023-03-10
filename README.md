@@ -36,6 +36,7 @@ Once the JAR file is built, you can run it using
 ## Useful links
 
 - Read the documentation at [vaadin.com/docs](https://vaadin.com/docs).
+- Porcupine Wake Word at [picovoice.ai/docs/porcupine/](https://picovoice.ai/docs/porcupine/)
 - Follow the tutorial at [vaadin.com/docs/latest/tutorial/overview](https://vaadin.com/docs/latest/tutorial/overview).
 - Create new projects at [start.vaadin.com](https://start.vaadin.com/).
 - Search UI components and their usage examples at [vaadin.com/docs/latest/components](https://vaadin.com/docs/latest/components).
