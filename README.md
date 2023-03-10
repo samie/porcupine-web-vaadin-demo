@@ -1,4 +1,6 @@
-# Porcupine Vaadin Demo
+# Picovoice Porcupine Vaadin Demo
+
+More details: https://docs.google.com/document/d/1RnspHVcEIMVWJCsXvNgAm2l8dIFftJRUC6nAYEgbm00/edit#
 
 This project can be used as a starting point to create your own Vaadin application with Spring Boot.
 It contains all the necessary configuration and some placeholder files to get you started.
