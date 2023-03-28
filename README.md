@@ -1,6 +1,6 @@
 # Picovoice Porcupine Vaadin Demo
 
-More details: https://docs.google.com/document/d/1RnspHVcEIMVWJCsXvNgAm2l8dIFftJRUC6nAYEgbm00/edit#
+More details: https://dev.to/samiekblad/always-listening-voice-commands-for-vaadin-web-applications-3bhp
 
 This project can be used as a starting point to create your own Vaadin application with Spring Boot.
 It contains all the necessary configuration and some placeholder files to get you started.
