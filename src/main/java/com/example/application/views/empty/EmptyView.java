@@ -1,5 +1,6 @@
 package com.example.application.views.empty;
 
+import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.icon.Icon;
 import com.vaadin.flow.component.icon.VaadinIcon;
@@ -22,7 +23,7 @@ public class EmptyView extends VerticalLayout {
         getStyle().set("text-align", "center");
 
         final Porcupine porcupine = new Porcupine(System.getenv("PICOVOICE_ACCESSKEY"));
-        add(new Button("Start wake word detection", e -> {
+        final Button startButton = new Button("Start wake word detection", e -> {
             Button button = e.getSource();
             if (!porcupine.isStarted()) {
                 porcupine.start();
@@ -33,7 +34,9 @@ public class EmptyView extends VerticalLayout {
                 button.setIcon(null);
                 button.setText("Start wake word detection");
             }
-        }));
+        });
+        startButton.addClickShortcut(Key.SPACE);
+        add(startButton);
 
         Porcupine.addListener(evt -> {
             Notification.show("Detected word '"+evt.getLabel()+"'");
