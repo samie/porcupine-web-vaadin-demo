@@ -12,6 +12,8 @@ import com.vaadin.flow.component.page.Page;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
+import java.util.Random;
+
 @PageTitle("Empty")
 @Route(value = "")
 public class EmptyView extends VerticalLayout {
@@ -40,6 +42,7 @@ public class EmptyView extends VerticalLayout {
 
         Porcupine.addListener(evt -> {
             Notification.show("Detected word '"+evt.getLabel()+"'");
+            evt.getSource().getStyle().set("background-color", "#"+Integer.toHexString(new Random().nextInt(16777215))+"60");
         });
     }
 }
