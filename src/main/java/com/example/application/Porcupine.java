@@ -1,5 +1,8 @@
 package com.example.application;
 
+import com.vaadin.flow.component.ComponentEvent;
+import com.vaadin.flow.component.ComponentEventListener;
+import com.vaadin.flow.component.DomEvent;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.dependency.NpmPackage;
@@ -29,4 +32,29 @@ public class Porcupine {
     public boolean isStarted() {
         return this.started;
     }
+
+    public static class WakewordEvent
+            extends ComponentEvent<UI> {
+        private final String label;
+
+        public WakewordEvent(UI source,
+                             boolean fromClient,
+                             String label) {
+            super(source, fromClient);
+            this.label = label;
+        }
+
+        public String getLabel() {
+            return this.label;
+        }
+    }
+
+    public static void addListener(ComponentEventListener<WakewordEvent> listener) {
+        UI.getCurrent().getElement().addEventListener("voice-wakeword", e -> {
+            listener.onComponentEvent(new WakewordEvent(UI.getCurrent(),
+                    true,
+                    e.getEventData().getString("event.detail")));
+        }).addEventData("event.detail");
+    }
+
 }
