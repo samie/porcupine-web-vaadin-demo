@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <!-- Project from https://start.vaadin.com/project/e63b1a63-204a-4d36-81a3-2fec8a5bc2a1 -->
+    <!-- Project from https://github.com/samie/porcupine-web-vaadin-demo -->
     <groupId>com.example.application</groupId>
     <artifactId>porcupinevaadindemo</artifactId>
     <name>porcupinevaadindemo</name>
